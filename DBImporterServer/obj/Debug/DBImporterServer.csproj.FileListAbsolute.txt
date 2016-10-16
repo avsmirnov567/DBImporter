@@ -1,0 +1,2 @@
+c:\users\justw\documents\visual studio 2015\Projects\DBImporterServer\DBImporterServer\bin\Debug\DBImporterServer.exe.config
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterServer\bin\Debug\DBImporterServer.exe.config
