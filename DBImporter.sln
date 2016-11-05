@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBImporterServer", "DBImporterServer\DBImporterServer.csproj", "{0FC9FE86-C5D5-4FFA-8A5C-609413AA765B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBImporterClient", "DBImporterClient\DBImporterClient.csproj", "{647DABFB-ED2D-4EA8-88B1-D82006BAEE0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{79D083BD-6097-47FE-89C1-36A6BDA1B3DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{0FC9FE86-C5D5-4FFA-8A5C-609413AA765B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FC9FE86-C5D5-4FFA-8A5C-609413AA765B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FC9FE86-C5D5-4FFA-8A5C-609413AA765B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{647DABFB-ED2D-4EA8-88B1-D82006BAEE0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{647DABFB-ED2D-4EA8-88B1-D82006BAEE0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{647DABFB-ED2D-4EA8-88B1-D82006BAEE0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{647DABFB-ED2D-4EA8-88B1-D82006BAEE0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79D083BD-6097-47FE-89C1-36A6BDA1B3DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D083BD-6097-47FE-89C1-36A6BDA1B3DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D083BD-6097-47FE-89C1-36A6BDA1B3DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D083BD-6097-47FE-89C1-36A6BDA1B3DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -16,5 +16,15 @@ namespace DBImporterClient
         {
             InitializeComponent();
         }
+
+        private void loadBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sendBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
