@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBlob.cs" />
+    <Compile Include="DataType.cs" />
     <Compile Include="Encryptor.cs" />
     <Compile Include="Serializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

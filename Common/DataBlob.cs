@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Common
 {
-    class DataBlob
+    [Serializable]
+    public class DataBlob
     {
-        public String Data { get; set; }
+        public string Data { get; set; }
 
-        public String Key { get; set; }
+        public DataType Type { get; set; }
+
+        public string Key { get; set; }
     }
 }

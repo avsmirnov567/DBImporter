@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common
+namespace DBImporterClient
 {
-    public class Encryptor
+    class DataSendHandler
     {
-
     }
 }

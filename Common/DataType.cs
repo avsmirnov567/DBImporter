@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Common
 {
-    public class Encryptor
+    public enum DataType
     {
-
+        MESSAGE = 0,
+        CLIENT_QUEUE_ADRESS = 1,
+        PUBLIC_RSA = 2
     }
 }

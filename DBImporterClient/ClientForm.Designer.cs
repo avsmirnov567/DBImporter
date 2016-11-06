@@ -34,12 +34,15 @@
             this.sendBtn = new System.Windows.Forms.Button();
             this.radioBtnSockets = new System.Windows.Forms.RadioButton();
             this.radioBtnMSMQ = new System.Windows.Forms.RadioButton();
+            this.connectBtn = new System.Windows.Forms.Button();
+            this.serverPathTextBox = new System.Windows.Forms.TextBox();
             this.sendGroup.SuspendLayout();
             this.SuspendLayout();
             // 
             // loadBtn
             // 
-            this.loadBtn.Location = new System.Drawing.Point(12, 160);
+            this.loadBtn.Enabled = false;
+            this.loadBtn.Location = new System.Drawing.Point(12, 194);
             this.loadBtn.Name = "loadBtn";
             this.loadBtn.Size = new System.Drawing.Size(199, 29);
             this.loadBtn.TabIndex = 0;
@@ -49,7 +52,7 @@
             // 
             // loadedDataTextBox
             // 
-            this.loadedDataTextBox.Location = new System.Drawing.Point(13, 12);
+            this.loadedDataTextBox.Location = new System.Drawing.Point(12, 45);
             this.loadedDataTextBox.Multiline = true;
             this.loadedDataTextBox.Name = "loadedDataTextBox";
             this.loadedDataTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -62,13 +65,14 @@
             this.sendGroup.Controls.Add(this.radioBtnSockets);
             this.sendGroup.Controls.Add(this.radioBtnMSMQ);
             this.sendGroup.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.sendGroup.Location = new System.Drawing.Point(369, 160);
+            this.sendGroup.Location = new System.Drawing.Point(369, 193);
             this.sendGroup.Name = "sendGroup";
             this.sendGroup.Size = new System.Drawing.Size(329, 62);
             this.sendGroup.TabIndex = 2;
             // 
             // sendBtn
             // 
+            this.sendBtn.Enabled = false;
             this.sendBtn.Location = new System.Drawing.Point(164, 13);
             this.sendBtn.Name = "sendBtn";
             this.sendBtn.Size = new System.Drawing.Size(147, 31);
@@ -99,12 +103,33 @@
             this.radioBtnMSMQ.Text = "MSMQ";
             this.radioBtnMSMQ.UseVisualStyleBackColor = true;
             // 
+            // connectBtn
+            // 
+            this.connectBtn.Enabled = false;
+            this.connectBtn.Location = new System.Drawing.Point(500, 7);
+            this.connectBtn.Name = "connectBtn";
+            this.connectBtn.Size = new System.Drawing.Size(198, 27);
+            this.connectBtn.TabIndex = 3;
+            this.connectBtn.Text = "Подключиться к серверу";
+            this.connectBtn.UseVisualStyleBackColor = true;
+            this.connectBtn.Click += new System.EventHandler(this.connectBtn_Click);
+            // 
+            // serverPathTextBox
+            // 
+            this.serverPathTextBox.Location = new System.Drawing.Point(12, 12);
+            this.serverPathTextBox.Name = "serverPathTextBox";
+            this.serverPathTextBox.Size = new System.Drawing.Size(482, 22);
+            this.serverPathTextBox.TabIndex = 4;
+            this.serverPathTextBox.TextChanged += new System.EventHandler(this.serverPathTextBox_TextChanged);
+            // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(710, 234);
+            this.ClientSize = new System.Drawing.Size(710, 267);
+            this.Controls.Add(this.serverPathTextBox);
+            this.Controls.Add(this.connectBtn);
             this.Controls.Add(this.sendGroup);
             this.Controls.Add(this.loadedDataTextBox);
             this.Controls.Add(this.loadBtn);
@@ -125,6 +150,8 @@
         private System.Windows.Forms.RadioButton radioBtnSockets;
         private System.Windows.Forms.RadioButton radioBtnMSMQ;
         private System.Windows.Forms.Button sendBtn;
+        private System.Windows.Forms.Button connectBtn;
+        private System.Windows.Forms.TextBox serverPathTextBox;
     }
 }
 

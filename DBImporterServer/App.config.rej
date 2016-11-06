@@ -1,0 +1,14 @@
+diff a/DBImporterServer/App.config b/DBImporterServer/App.config	(rejected hunks)
+@@ -7,10 +7,4 @@
+   <startup>
+     <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+   </startup>
+-  <entityFramework>
+-    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework" />
+-    <providers>
+-      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+-    </providers>
+-  </entityFramework>
+\ No newline at end of file
+ <connectionStrings><add name="MedicineContext" connectionString="data source=DESKTOP-JT1HO2K\SQLEXPRESS;initial catalog=medicine;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" /></connectionStrings></configuration>
+\ No newline at end of file
