@@ -135,6 +135,7 @@
             this.Controls.Add(this.loadBtn);
             this.Name = "ClientForm";
             this.Text = "DBImporter - Client";
+            this.Load += new System.EventHandler(this.ClientForm_Load);
             this.sendGroup.ResumeLayout(false);
             this.sendGroup.PerformLayout();
             this.ResumeLayout(false);

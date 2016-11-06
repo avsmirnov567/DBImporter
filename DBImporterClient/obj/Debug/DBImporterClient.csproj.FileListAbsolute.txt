@@ -7,3 +7,5 @@ C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterClient
 C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterClient\obj\Debug\DBImporterClient.csproj.GenerateResource.Cache
 C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterClient\obj\Debug\DBImporterClient.exe
 C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterClient\obj\Debug\DBImporterClient.pdb
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterClient\bin\Debug\Common.dll
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterClient\bin\Debug\Common.pdb

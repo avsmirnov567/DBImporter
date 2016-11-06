@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Common;
 using System.Configuration;
 using System.Messaging;
+using System.Net;
 
 namespace DBImporterClient
 {
@@ -18,7 +19,7 @@ namespace DBImporterClient
             try
             {
                 MessageQueue q = new MessageQueue(serverQueuePath);
-                q.Send(dataToSend);
+                q.Send(dataToSend, "path");
                 answer = true;
             }
             catch
@@ -31,8 +32,9 @@ namespace DBImporterClient
         public static byte[] GetPreparedLocalQueuePath()
         {
             DataBlob message = new DataBlob();       
-            message.Data = ConfigurationManager.AppSettings["local_queue_path"];
+            message.Data = Dns.GetHostName() + ConfigurationManager.AppSettings["local_queue_path"];
             message.Type = DataType.CLIENT_QUEUE_ADRESS;
+            message.Key = null;
             return Serializer.SerializeObject(message);
         }
     }

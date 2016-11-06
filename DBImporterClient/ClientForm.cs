@@ -12,11 +12,13 @@ using System.Messaging;
 using System.Net;
 using System.Net.Sockets;
 using System.Configuration;
+using Common;
 
 namespace DBImporterClient
 {
     public partial class ClientForm : Form
     {
+        delegate void UpdateUI();
         private Thread QueueTread;
 
         public ClientForm()
@@ -24,7 +26,46 @@ namespace DBImporterClient
             InitializeComponent();
         }
 
+        private void ClientForm_Load(object sender, EventArgs e)
+        {
+            QueueTread = new Thread(QueueWork);
+            QueueTread.IsBackground = true;
+            QueueTread.Start();
+        }
 
+        private void QueueWork()
+        {
+            string queuePath = Dns.GetHostName() + ConfigurationManager.AppSettings["local_queue_path"];
+            MessageQueue queue = null;
+            if (!MessageQueue.Exists(queuePath))
+            {
+                queue = MessageQueue.Create(queuePath);
+            }
+            else
+            {
+                queue = new MessageQueue(queuePath);
+            }
+            queue.Formatter = new XmlMessageFormatter(new Type[] { typeof(String) });
+            while (true)
+            {
+                System.Messaging.Message message = queue.Receive();
+                if (message.Label == "key")
+                {
+                    DataBlob blob = (DataBlob)Serializer.DeserializeObject(Convert.FromBase64String(message.Body.ToString()));
+                    ConfigurationManager.AppSettings.Set("RSA", blob.Data);
+                    UpdateUI d = new UpdateUI(UpdateUIAfterRSARecieved);
+                    Invoke(d);
+                }
+            }
+        }
+
+        private void UpdateUIAfterRSARecieved()
+        {
+            connectBtn.Text = "RSA ключ получен";
+            connectBtn.Enabled = false;
+            serverPathTextBox.Enabled = false;
+            loadBtn.Enabled = true;
+        }
 
         private void loadBtn_Click(object sender, EventArgs e)
         {
@@ -38,6 +79,10 @@ namespace DBImporterClient
                 {
                     string result = CSVReader.ReadCSV(path);
                     loadedDataTextBox.Text = result;
+                    if (result.Length > 0)
+                        sendBtn.Enabled = true;
+                    else
+                        MessageBox.Show("Файл пуст!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch (Exception ex)
                 {
