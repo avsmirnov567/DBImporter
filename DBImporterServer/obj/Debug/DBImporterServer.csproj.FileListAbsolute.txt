@@ -1,2 +1,15 @@
 c:\users\justw\documents\visual studio 2015\Projects\DBImporterServer\DBImporterServer\bin\Debug\DBImporterServer.exe.config
 C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterServer\bin\Debug\DBImporterServer.exe.config
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterServer\bin\Debug\DBImporterServer.exe
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterServer\bin\Debug\DBImporterServer.pdb
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterServer\bin\Debug\EntityFramework.dll
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterServer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterServer\bin\Debug\EntityFramework.xml
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterServer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterServer\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterServer\obj\Debug\DBImporterServer.csprojResolveAssemblyReference.cache
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterServer\obj\Debug\DBImporterServer.Properties.Resources.resources
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterServer\obj\Debug\DBImporterServer.ServerForm.resources
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterServer\obj\Debug\DBImporterServer.csproj.GenerateResource.Cache
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterServer\obj\Debug\DBImporterServer.exe
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterServer\obj\Debug\DBImporterServer.pdb

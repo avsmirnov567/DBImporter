@@ -14,18 +14,15 @@ namespace DBImporterServer.Model
             Diagnoses = new HashSet<Diagnoses>();
         }
 
-        public int id { get; set; }
+        public Guid id { get; set; }
 
         [Required]
+        [StringLength(50)]
         public string fullname { get; set; }
 
-        public string adress { get; set; }
-
-        public string telephone { get; set; }
-
+        [Required]
+        [StringLength(50)]
         public string insuranse { get; set; }
-
-        public string passport { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Diagnoses> Diagnoses { get; set; }

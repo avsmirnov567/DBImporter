@@ -14,9 +14,10 @@ namespace DBImporterServer.Model
             Doctors = new HashSet<Doctors>();
         }
 
-        public int id { get; set; }
+        public Guid id { get; set; }
 
         [Required]
+        [StringLength(50)]
         public string name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -1,0 +1,9 @@
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterClient\bin\Debug\DBImporterClient.exe.config
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterClient\bin\Debug\DBImporterClient.exe
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterClient\bin\Debug\DBImporterClient.pdb
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterClient\obj\Debug\DBImporterClient.csprojResolveAssemblyReference.cache
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterClient\obj\Debug\DBImporterClient.ClientForm.resources
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterClient\obj\Debug\DBImporterClient.Properties.Resources.resources
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterClient\obj\Debug\DBImporterClient.csproj.GenerateResource.Cache
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterClient\obj\Debug\DBImporterClient.exe
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\DBImporterClient\obj\Debug\DBImporterClient.pdb

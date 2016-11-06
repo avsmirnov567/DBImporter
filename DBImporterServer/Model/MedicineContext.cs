@@ -40,8 +40,9 @@ namespace DBImporterServer.Model
 
             modelBuilder.Entity<Specs>()
                 .HasMany(e => e.Doctors)
-                .WithOptional(e => e.Specs)
-                .HasForeignKey(e => e.spec);
+                .WithRequired(e => e.Specs)
+                .HasForeignKey(e => e.spec)
+                .WillCascadeOnDelete(false);
         }
     }
 }

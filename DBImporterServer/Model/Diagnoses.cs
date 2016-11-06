@@ -8,13 +8,13 @@ namespace DBImporterServer.Model
 
     public partial class Diagnoses
     {
-        public int id { get; set; }
+        public Guid id { get; set; }
 
-        public int patient { get; set; }
+        public Guid doctor { get; set; }
 
-        public int doctor { get; set; }
+        public Guid patient { get; set; }
 
-        public int disease { get; set; }
+        public Guid disease { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime date { get; set; }
