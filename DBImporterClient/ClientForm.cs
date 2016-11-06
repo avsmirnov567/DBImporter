@@ -55,6 +55,7 @@ namespace DBImporterClient
                     ConfigurationManager.AppSettings.Set("RSA", blob.Data);
                     UpdateUI d = new UpdateUI(UpdateUIAfterRSARecieved);
                     Invoke(d);
+                    Thread.CurrentThread.Abort();
                 }
             }
         }
