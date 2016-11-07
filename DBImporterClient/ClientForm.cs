@@ -19,7 +19,7 @@ namespace DBImporterClient
     public partial class ClientForm : Form
     {
         delegate void UpdateUI();
-        private Thread QueueTread;
+        private Thread QueueThread;
 
         public ClientForm()
         {
@@ -28,9 +28,9 @@ namespace DBImporterClient
 
         private void ClientForm_Load(object sender, EventArgs e)
         {
-            QueueTread = new Thread(QueueWork);
-            QueueTread.IsBackground = true;
-            QueueTread.Start();
+            QueueThread = new Thread(QueueWork);
+            QueueThread.IsBackground = true;
+            QueueThread.Start();
         }
 
         private void QueueWork()
@@ -65,6 +65,7 @@ namespace DBImporterClient
             connectBtn.Text = "RSA ключ получен";
             connectBtn.Enabled = false;
             serverPathTextBox.Enabled = false;
+            serverPathTextBox.Text = ConfigurationManager.AppSettings["RSA"];
             loadBtn.Enabled = true;
         }
 
@@ -115,6 +116,10 @@ namespace DBImporterClient
                     MessageBox.Show("Указан неверный путь к очереди сервера, либо очередь не существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

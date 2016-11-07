@@ -19,7 +19,7 @@ namespace DBImporterClient
             try
             {
                 MessageQueue q = new MessageQueue(serverQueuePath);
-                q.Send(dataToSend, "path");
+                q.Send(Convert.ToBase64String(dataToSend), "path");
                 answer = true;
             }
             catch

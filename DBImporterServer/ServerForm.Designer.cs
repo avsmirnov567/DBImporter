@@ -34,9 +34,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 253);
+            this.ClientSize = new System.Drawing.Size(657, 211);
             this.Name = "ServerForm";
             this.Text = "DBImporter Server";
+            this.Load += new System.EventHandler(this.ServerForm_Load);
             this.ResumeLayout(false);
 
         }
