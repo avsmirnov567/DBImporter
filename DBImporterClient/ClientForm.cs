@@ -18,6 +18,7 @@ namespace DBImporterClient
 {
     public partial class ClientForm : Form
     {
+        bool Connected;
         delegate void UpdateUI();
         private Thread QueueThread;
 
@@ -62,8 +63,9 @@ namespace DBImporterClient
 
         private void UpdateUIAfterRSARecieved()
         {
-            connectBtn.Text = "RSA ключ получен";
+            Connected = true;
             connectBtn.Enabled = false;
+            connectBtn.Text = "RSA ключ получен";
             serverPathTextBox.Enabled = false;
             serverPathTextBox.Text = ConfigurationManager.AppSettings["RSA"];
             loadBtn.Enabled = true;
@@ -100,7 +102,7 @@ namespace DBImporterClient
 
         private void serverPathTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (serverPathTextBox.Text.Length > 0)
+            if (serverPathTextBox.Text.Length > 0 && !Connected)
                 connectBtn.Enabled = true;
             else
                 connectBtn.Enabled = false;
