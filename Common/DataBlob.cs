@@ -10,9 +10,6 @@ namespace Common
     public class DataBlob
     {
         public string Data { get; set; }
-
-        public DataType Type { get; set; }
-
         public string Key { get; set; }
     }
 }
