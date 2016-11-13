@@ -51,7 +51,10 @@ namespace Client
             while (true)
             {
                 System.Messaging.Message message = queue.Receive();
-                
+                if (message.Label == "Key")
+                {
+                    MessageBox.Show("Ты получил вонючий ключ: "+ message.Body.ToString());                 
+                }
             }
         }
 

@@ -3,17 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Configuration;
 using System.Messaging;
 using Common;
 
-namespace Client
+namespace Server
 {
-    class KeySendingHandler
+    class RecievingHandler
     {
-        public static bool SendPublicRsaToServerQueue(string queuePath)
+        private static byte[] symmetricalKey;
+        public static bool SendEncryptedSymmetricalKey(string rsaRequest)
         {
             bool result = false;
+
+            DataBlob input = (DataBlob)Serializer.DeserializeObject(Convert.FromBase64String(rsaRequest));
+            string queuePath = input.Data;
+
+            symmetricalKey = Encryptor.GenerateSymmetricalKey();
+            byte[] encryptedKey = Encryptor.EncryptAsymmetrycal(symmetricalKey, input.Key);
+
             try
             {
                 MessageQueue queue = null;
@@ -25,8 +32,7 @@ namespace Client
                 {
                     queue = new MessageQueue(queuePath);
                 }
-                
-                queue.Send(GetPreparedRequest(), "Key");
+                queue.Send(Convert.ToBase64String(encryptedKey), "Key");
                 result = true;
             }
             catch (Exception)
@@ -35,14 +41,6 @@ namespace Client
             }
 
             return result;
-        }
-
-        private static string GetPreparedRequest()
-        {
-            DataBlob dBlob = new DataBlob();
-            dBlob.Data = ConfigurationManager.AppSettings["qPath"];
-            dBlob.Key = ConfigurationManager.AppSettings["rsaPublic"];
-            return Convert.ToBase64String(Serializer.SerializeObject(dBlob));
         }
     }
 }
