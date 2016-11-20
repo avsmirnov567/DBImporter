@@ -1,5 +1,4 @@
 C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\Client\obj\Debug\DBClient.csprojResolveAssemblyReference.cache
-C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\Client\obj\Debug\Client.ClientConnectForm.resources
 C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\Client\obj\Debug\Client.Properties.Resources.resources
 C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\Client\obj\Debug\DBClient.csproj.GenerateResource.Cache
 C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\Client\bin\Debug\Client.exe.config
@@ -9,3 +8,4 @@ C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\Client\bin\Debug
 C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\Client\bin\Debug\Common.pdb
 C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\Client\obj\Debug\Client.exe
 C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\Client\obj\Debug\Client.pdb
+C:\Users\justw\Documents\Visual Studio 2015\Projects\DBImporter\Client\obj\Debug\Client.ClientForm.resources

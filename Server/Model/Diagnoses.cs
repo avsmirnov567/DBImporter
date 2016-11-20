@@ -16,8 +16,7 @@ namespace Server.Model
 
         public Guid disease { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime date { get; set; }
+        public int number { get; set; }
 
         public virtual Diseases Diseases { get; set; }
 

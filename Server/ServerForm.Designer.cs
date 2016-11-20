@@ -28,36 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbQueue = new System.Windows.Forms.TextBox();
+            this.tbInput = new System.Windows.Forms.TextBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // tbInput
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Адрес очереди:";
+            this.tbInput.Location = new System.Drawing.Point(13, 12);
+            this.tbInput.Multiline = true;
+            this.tbInput.Name = "tbInput";
+            this.tbInput.ReadOnly = true;
+            this.tbInput.Size = new System.Drawing.Size(527, 255);
+            this.tbInput.TabIndex = 2;
             // 
-            // tbQueue
+            // btnClear
             // 
-            this.tbQueue.Location = new System.Drawing.Point(13, 34);
-            this.tbQueue.Name = "tbQueue";
-            this.tbQueue.ReadOnly = true;
-            this.tbQueue.Size = new System.Drawing.Size(527, 22);
-            this.tbQueue.TabIndex = 1;
+            this.btnClear.Location = new System.Drawing.Point(371, 283);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(167, 27);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "Очистить базу данных";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // ServerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 208);
-            this.Controls.Add(this.tbQueue);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(550, 322);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.tbInput);
             this.Name = "ServerForm";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ServerForm_FormClosing);
             this.Load += new System.EventHandler(this.ServerForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -65,9 +68,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbQueue;
+        private System.Windows.Forms.TextBox tbInput;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 

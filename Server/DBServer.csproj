@@ -61,13 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RecievingHandler.cs" />
     <Compile Include="Model\Diagnoses.cs" />
     <Compile Include="Model\Diseases.cs" />
     <Compile Include="Model\Doctors.cs" />
     <Compile Include="Model\MedicineContext.cs" />
     <Compile Include="Model\Patients.cs" />
-    <Compile Include="Model\Specs.cs" />
+    <Compile Include="RecievingHandler.cs" />
     <Compile Include="ServerForm.cs">
       <SubType>Form</SubType>
     </Compile>

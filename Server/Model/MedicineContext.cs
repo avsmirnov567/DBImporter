@@ -16,7 +16,6 @@ namespace Server.Model
         public virtual DbSet<Diseases> Diseases { get; set; }
         public virtual DbSet<Doctors> Doctors { get; set; }
         public virtual DbSet<Patients> Patients { get; set; }
-        public virtual DbSet<Specs> Specs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -36,12 +35,6 @@ namespace Server.Model
                 .HasMany(e => e.Diagnoses)
                 .WithRequired(e => e.Patients)
                 .HasForeignKey(e => e.patient)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Specs>()
-                .HasMany(e => e.Doctors)
-                .WithRequired(e => e.Specs)
-                .HasForeignKey(e => e.spec)
                 .WillCascadeOnDelete(false);
         }
     }
