@@ -79,7 +79,7 @@ namespace Server
                     int result = RecievingHandler.RecieveData(input);
                     tbInput.Invoke((MethodInvoker)delegate
                     {
-                        tbInput.AppendText("\r\n" + result.ToString() + " новых объектов добавлено.");
+                        tbInput.AppendText("\r\n" + result.ToString() + " новых записей добавлено.");
                     });
                 }
             }
@@ -140,6 +140,7 @@ namespace Server
         private void ServerForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             QueueThread.Abort();
+            MessageQueue.Delete(ConfigurationManager.AppSettings["qPath"]);     
             serverListener.Close();
         }
 
@@ -153,7 +154,8 @@ namespace Server
                 deleted += db.Database.ExecuteSqlCommand("DELETE FROM dbo.[Patients]");
                 deleted += db.Database.ExecuteSqlCommand("DELETE FROM dbo.[Doctors]");
                 deleted += db.Database.ExecuteSqlCommand("DELETE FROM dbo.[Diseases]");
-                text += "Удалено: " + deleted.ToString() + " объектов.";
+                deleted = deleted / 3;
+                text += "Удалено: " + deleted.ToString() + " записи.";
             }
             tbInput.AppendText("\r\n" + text);
         }

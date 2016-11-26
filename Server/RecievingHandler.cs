@@ -67,7 +67,7 @@ namespace Server
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            return sentTotal;
+            return sentTotal/3;
         }
 
         private static int UpdateDatabase(string p_doctor, string p_patient, string p_disease, string p_number)

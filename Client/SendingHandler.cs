@@ -23,7 +23,7 @@ namespace Client
                 MessageQueue queue = null;
                 if (!MessageQueue.Exists(queuePath))
                 {
-                    queue = MessageQueue.Create(queuePath);
+                    MessageBox.Show("Очередь на сервере отсутствует, перезапустите обе программы.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
